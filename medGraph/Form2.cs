@@ -109,7 +109,7 @@ namespace medGraph
             PointPairList p = new PointPairList();
         
 
-            for (int i = 0; i <= 6; i++)
+            for (int i = 0; i <= 10; i++)
             {
                 p.Add(i, b*Math.Pow(Math.E, o * i));
                // p[i].X = i;

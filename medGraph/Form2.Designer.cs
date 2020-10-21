@@ -47,7 +47,7 @@
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(379, 330);
             this.zedGraphControl1.TabIndex = 0;
-            this.zedGraphControl1.UseExtendedPrintDialog = true;
+        //    this.zedGraphControl1.UseExtendedPrintDialog = true;
             this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // Form2
