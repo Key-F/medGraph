@@ -107,10 +107,11 @@ namespace medGraph
             GraphPane pane = zedGraphControl1.GraphPane;
 
             PointPairList p = new PointPairList();
+        
 
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 6; i++)
             {
-                p.Add(i, Math.Pow(Math.E, o + b * i));
+                p.Add(i, b*Math.Pow(Math.E, o * i));
                // p[i].X = i;
                // p[i].Y = Math.Log(o + b * i);
             }

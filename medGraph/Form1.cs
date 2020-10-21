@@ -375,6 +375,19 @@ namespace medGraph
                 list1.Add(c, dd);
             }
             IList<double> XandY =  PP.PPToAxe(list1);
+
+            Eapp epp = new Eapp();
+            double[] X = new double[XandY.Count / 2];
+            double[] Y = new double[XandY.Count / 2];
+            for (int i = 0; i < XandY.Count/2; i++)
+            {
+                X[i] = XandY[i];
+                Y[i] = XandY[i + XandY.Count / 2];
+
+            }
+            double[] func = new double[2];
+            epp.approx(XandY.Count / 2, X, Y, func);
+
             //double f = XandY[0];
             double a1=0, a2=0, a3=0, a4=0, b, o, a5=0, a6=0;
             for (int i = 0; i < XandY.Count/2; i++)
@@ -391,7 +404,7 @@ namespace medGraph
             PP p = new PP(list1);
             Math.Log(5);
           
-            Form2 zxc = new Form2(b, o, list1);
+            Form2 zxc = new Form2(func[0], func[1], list1);
             zxc.Show();
         }
 

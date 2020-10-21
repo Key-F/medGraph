@@ -830,7 +830,7 @@
             this.d52.Name = "d52";
             this.d52.Size = new System.Drawing.Size(68, 23);
             this.d52.TabIndex = 7;
-            this.d52.Text = "20";
+            this.d52.Text = "90,25";
             // 
             // d51
             // 
@@ -838,7 +838,7 @@
             this.d51.Name = "d51";
             this.d51.Size = new System.Drawing.Size(68, 23);
             this.d51.TabIndex = 6;
-            this.d51.Text = "16";
+            this.d51.Text = "90,25";
             // 
             // c5
             // 
@@ -846,7 +846,7 @@
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(106, 23);
             this.c5.TabIndex = 5;
-            this.c5.Text = "9";
+            this.c5.Text = "9,5";
             // 
             // panel7
             // 
@@ -899,7 +899,7 @@
             this.d42.Name = "d42";
             this.d42.Size = new System.Drawing.Size(68, 23);
             this.d42.TabIndex = 7;
-            this.d42.Text = "11";
+            this.d42.Text = "56,25";
             // 
             // d41
             // 
@@ -907,7 +907,7 @@
             this.d41.Name = "d41";
             this.d41.Size = new System.Drawing.Size(68, 23);
             this.d41.TabIndex = 6;
-            this.d41.Text = "10";
+            this.d41.Text = "56,25";
             // 
             // c4
             // 
@@ -915,7 +915,7 @@
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(106, 23);
             this.c4.TabIndex = 5;
-            this.c4.Text = "7";
+            this.c4.Text = "7,5";
             // 
             // panel5
             // 
@@ -968,7 +968,7 @@
             this.d32.Name = "d32";
             this.d32.Size = new System.Drawing.Size(68, 23);
             this.d32.TabIndex = 7;
-            this.d32.Text = "8";
+            this.d32.Text = "30,25";
             // 
             // d31
             // 
@@ -976,7 +976,7 @@
             this.d31.Name = "d31";
             this.d31.Size = new System.Drawing.Size(68, 23);
             this.d31.TabIndex = 6;
-            this.d31.Text = "7";
+            this.d31.Text = "30,25";
             // 
             // c3
             // 
@@ -984,7 +984,7 @@
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(106, 23);
             this.c3.TabIndex = 5;
-            this.c3.Text = "5";
+            this.c3.Text = "5,5";
             // 
             // panel3
             // 
@@ -1037,7 +1037,7 @@
             this.d22.Name = "d22";
             this.d22.Size = new System.Drawing.Size(68, 23);
             this.d22.TabIndex = 7;
-            this.d22.Text = "4";
+            this.d22.Text = "12,25";
             // 
             // d21
             // 
@@ -1045,7 +1045,7 @@
             this.d21.Name = "d21";
             this.d21.Size = new System.Drawing.Size(68, 23);
             this.d21.TabIndex = 6;
-            this.d21.Text = "3";
+            this.d21.Text = "12,25";
             // 
             // c2
             // 
@@ -1053,7 +1053,7 @@
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(106, 23);
             this.c2.TabIndex = 5;
-            this.c2.Text = "4";
+            this.c2.Text = "3,5";
             // 
             // panel1
             // 
@@ -1106,7 +1106,7 @@
             this.d12.Name = "d12";
             this.d12.Size = new System.Drawing.Size(68, 23);
             this.d12.TabIndex = 7;
-            this.d12.Text = "2";
+            this.d12.Text = "2,25";
             // 
             // d11
             // 
@@ -1114,7 +1114,7 @@
             this.d11.Name = "d11";
             this.d11.Size = new System.Drawing.Size(68, 23);
             this.d11.TabIndex = 6;
-            this.d11.Text = "1";
+            this.d11.Text = "2,25";
             // 
             // c1
             // 
@@ -1122,7 +1122,7 @@
             this.c1.Name = "c1";
             this.c1.Size = new System.Drawing.Size(106, 23);
             this.c1.TabIndex = 5;
-            this.c1.Text = "2";
+            this.c1.Text = "1,5";
             // 
             // label14
             // 
