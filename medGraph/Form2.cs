@@ -109,7 +109,7 @@ namespace medGraph
             PointPairList p = new PointPairList();
         
 
-            for (int i = 0; i <= 10; i++)
+            for (double i = 0; i < list1[list1.Count - 1].X; i+=0.5)
             {
                 p.Add(i, b*Math.Pow(Math.E, o * i));
                // p[i].X = i;
@@ -129,8 +129,8 @@ namespace medGraph
 
             // Обводка ромбиков будут рисоваться голубым цветом (Color.Blue),
             // Опорные точки - ромбики (SymbolType.Diamond)
-            LineItem myCurve = pane.AddCurve("", p, Color.Black, SymbolType.Circle);
-            LineItem myCurve1 = pane.AddCurve("", list1, Color.Black, SymbolType.Circle);
+            LineItem myCurve = pane.AddCurve("fgfhgf", p, Color.Black, SymbolType.None);
+            LineItem myCurve1 = pane.AddCurve("", list1, Color.BlueViolet, SymbolType.Circle);
 
 
 
