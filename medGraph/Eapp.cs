@@ -12,9 +12,7 @@ namespace medGraph
         double[] xList;
         double[] yList;
 
-        public Eapp() { }
-
-        static double Sum(int n, double[] mass)
+        double Sum(int n, double[] mass)
         {
             double sum = 0;
             for (int i = 0; i < n; i++)
@@ -46,13 +44,22 @@ namespace medGraph
                 XY[i] = X[i] * Y[i];
             }
             // Решаем СЛАУ:
-            // Sum(n, X2)a1 + Sum(n, X)a0 = Sum(n, XY)
-            // Sum(n, X)a1 + na0 = Sum(n, Y)
-            a0 = (Sum(n, X2) * Sum(n, Y) - Sum(n, XY) * Sum(n, X)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
-            a1 = (Sum(n, XY) * n - Sum(n, X) * Sum(n, X)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
+            // Sum(n, X2)*a1 + Sum(n, X)*a0 = Sum(n, XY)
+            // Sum(n, X)*a1 + n*a0 = Sum(n, Y)
+
+            double a = Sum(n, X2);
+            double b = Sum(n, X);
+            double c = Sum(n, XY);
+            double d = Sum(n, X);
+            double e = n;
+            double f = Sum(n, Y);
+            a0 = (a * f - c * d) / (a * e - b * d);
+            a1 = (c * e - b * f) / (a * e - b * d);
+            // a0 = (Sum(n, X2) * Sum(n, Y) - Sum(n, XY) * Sum(n, X)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
+            // a1 = (Sum(n, XY) * n - Sum(n, X) * Sum(n, Y)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
             func[0] = Math.Pow(Math.E, a0);
             func[1] = a1;
-            //F = a * e^(b*x)
+            //F = func[0] * e^(func[1]*x)
         }
     }
 }
