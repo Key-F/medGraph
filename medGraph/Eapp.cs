@@ -12,7 +12,7 @@ namespace medGraph
         double[] xList;
         double[] yList;
 
-        double Sum(int n, double[] mass)
+        static double Sum(int n, double[] mass)
         {
             double sum = 0;
             for (int i = 0; i < n; i++)
@@ -20,6 +20,21 @@ namespace medGraph
                 sum += mass[i];
             }
             return sum;
+        }
+        public static void Gauss3(double[] o, ref double a2, ref double a1, ref double a0)
+        {
+            double[] p = new double[12];
+            p = o;
+            for (int i = 0; i < 3; i++)
+            {
+                p[i + 5] = p[i + 5] - p[4] / p[0] * p[i + 1];
+                p[i + 9] = p[i + 9] - p[8] / p[0] * p[i + 1];
+            }
+            //a0 = (a * f - c * d) / (a * e - b * d);
+            //a1 = (c * e - b * f) / (a * e - b * d);
+            a0 = (p[5] * p[11] - p[7] * p[9]) / (p[5] * p[10] - p[6] * p[9]);
+            a1 = (p[7] * p[10] - p[6] * p[11]) / (p[5] * p[10] - p[6] * p[9]);
+            a2 = (p[3] - p[2] * a0 - p[1] * a1) / p[0];
         }
         public void approx(int n, double[] xList, double[] yList, double[] func)
         {
@@ -60,6 +75,47 @@ namespace medGraph
             func[0] = Math.Pow(Math.E, a0);
             func[1] = a1;
             //F = func[0] * e^(func[1]*x)
+        }
+        public  void approx2(int n, double[] xList, double[] yList, ref double a, ref double b, ref double c)
+        {
+            double[] X4 = new double[n];
+            double[] X3 = new double[n];
+            double[] X2 = new double[n];
+            double[] X = new double[n];
+            double[] X2Y = new double[n];
+            double[] XY = new double[n];
+            double[] Y = new double[n];
+            double[] KoeffUr = new double[12];
+            double a2 = 0, a1 = 0, a0 = 0;
+
+            X = xList;
+            Y = yList;
+            for (int i = 0; i < n; i++)
+            {
+                X2[i] = X[i] * X[i];
+                X3[i] = X2[i] * X[i];
+                X4[i] = X3[i] * X[i];
+                XY[i] = X[i] * Y[i];
+                X2Y[i] = XY[i] * X[i];
+            }
+
+            KoeffUr[0] = Sum(n, X4);
+            KoeffUr[1] = Sum(n, X3);
+            KoeffUr[2] = Sum(n, X2);
+            KoeffUr[3] = Sum(n, X2Y);
+            KoeffUr[4] = Sum(n, X3);
+            KoeffUr[5] = Sum(n, X2);
+            KoeffUr[6] = Sum(n, X);
+            KoeffUr[7] = Sum(n, XY);
+            KoeffUr[8] = Sum(n, X2);
+            KoeffUr[9] = Sum(n, X);
+            KoeffUr[10] = n;
+            KoeffUr[11] = Sum(n, Y);
+    
+            Gauss3(KoeffUr, ref a2, ref a1, ref a0);
+            a = a2;
+            b = a1;
+            c = a0;
         }
     }
 }

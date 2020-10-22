@@ -385,10 +385,11 @@ namespace medGraph
                 Y[i] = XandY[i + XandY.Count / 2];
 
             }
-            double[] func = new double[2];
-            epp.approx(XandY.Count / 2, X, Y, func);
+            //double[] func = new double[2];
+            double pa = 0, pb = 0, pc = 0;
+            epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
 
-            //double f = XandY[0];
+            double f = XandY[0];
             double a1=0, a2=0, a3=0, a4=0, b, o, a5=0, a6=0;
             for (int i = 0; i < XandY.Count/2; i++)
             {
@@ -404,7 +405,7 @@ namespace medGraph
             PP p = new PP(list1);
             Math.Log(5);
           
-            Form2 zxc = new Form2(func[0], func[1], list1);
+            Form2 zxc = new Form2(pa, pb, pc, list1);
             zxc.Show();
         }
 
