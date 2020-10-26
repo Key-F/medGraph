@@ -359,6 +359,7 @@ namespace medGraph
 
         private void button7_Click(object sender, EventArgs e)
         {
+            list1.Clear();
             for (int i = 1; i <= Convert.ToInt32(textBox14.Text); i++)
             {
                 string controlNameC = "c" + i;
@@ -439,9 +440,14 @@ namespace medGraph
                 xc.Show();
             }
         }
+
+        private void C4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
-  
+
     public class Trendline
     {
         private readonly IList<double> xAxisValues;
