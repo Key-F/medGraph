@@ -68,6 +68,7 @@
     <Compile Include="formula.cs" />
     <Compile Include="part1.cs" />
     <Compile Include="part2.cs" />
+    <Compile Include="PP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

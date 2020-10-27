@@ -8,10 +8,6 @@ namespace medGraph
 {
     class Eapp
     {
-        double n;
-        double[] xList;
-        double[] yList;
-
         static double Sum(int n, double[] mass)
         {
             double sum = 0;
