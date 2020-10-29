@@ -32,14 +32,16 @@ namespace medGraph
                 string controlNameC = "c" + i;
                 var controls = this.Controls.Find(controlNameC, true);
                 var control = controls.FirstOrDefault();
-                double c = Convert.ToDouble(control.Text);
+                double.TryParse(control.Text.Replace('.', ','), out double c);     
                 string controlNameD1 = "d" + i + "1";
                 string controlNameD2 = "d" + i + "2";
                 var controlsD1 = this.Controls.Find(controlNameD1, true);
                 var controlD1 = controlsD1.FirstOrDefault();
                 var controlsD2 = this.Controls.Find(controlNameD2, true);
                 var controlD2 = controlsD2.FirstOrDefault();
-                double dd = (Convert.ToDouble(controlD1.Text) + Convert.ToDouble(controlD2.Text)) / 2;
+                double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
+                double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
+                double dd = (d1 + d2)/ 2;
                 list1.Add(c, dd);
             }
             IList<double> XandY =  PP.PPToAxe(list1);
