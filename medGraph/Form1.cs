@@ -18,7 +18,9 @@ namespace medGraph
         
         PointPairList list1 = new PointPairList();
         double pa, pb, pc;
-      
+        Form2 zxc;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -26,48 +28,16 @@ namespace medGraph
 
         private void button7_Click(object sender, EventArgs e)
         {
-            list1.Clear();
-            for (int i = 1; i <= Convert.ToInt32(textBox14.Text); i++)
-            {
-                string controlNameC = "c" + i;
-                var controls = this.Controls.Find(controlNameC, true);
-                var control = controls.FirstOrDefault();
-                double.TryParse(control.Text.Replace('.', ','), out double c);     
-                string controlNameD1 = "d" + i + "1";
-                string controlNameD2 = "d" + i + "2";
-                var controlsD1 = this.Controls.Find(controlNameD1, true);
-                var controlD1 = controlsD1.FirstOrDefault();
-                var controlsD2 = this.Controls.Find(controlNameD2, true);
-                var controlD2 = controlsD2.FirstOrDefault();
-                double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
-                double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
-                double dd = (d1 + d2)/ 2;
-                list1.Add(c, dd);
-            }
-            IList<double> XandY =  PP.PPToAxe(list1);
-
-            Eapp epp = new Eapp();
-            double[] X = new double[XandY.Count / 2];
-            double[] Y = new double[XandY.Count / 2];
-            for (int i = 0; i < XandY.Count/2; i++)
-            {
-                X[i] = XandY[i];
-                Y[i] = XandY[i + XandY.Count / 2];
-
-            }
-            pa = 0;
-            pb = 0; 
-            pc = 0;
-            epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
-
-           
-            Form2 zxc = new Form2(pa, pb, pc, list1);
+            firstPart();
+            zxc = new Form2(pa, pb, pc, list1, null);
             zxc.Show();
         }
 
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (zxc != null) zxc.Close();
+            firstPart();
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {
                 string controlNameD1 = "ed" + i + "1";
@@ -81,17 +51,68 @@ namespace medGraph
                 var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
                 var controlresultD = controlsNameresultD.FirstOrDefault();
                 controlresultD.Text = Convert.ToString(dd);
-                double c = SolveQuadratic(pa, pb, pc);
+                double c = SolveQuadratic(pa, pb, pc, dd);
                 string contolNameConc = "conc" + i;
                 var controlsConc = this.Controls.Find(contolNameConc, true);
                 var controlConc = controlsConc.FirstOrDefault();
-                controlConc.Text = Convert.ToString(c);
 
+                //controlConc.Text = Convert.ToString(Math.Round(c, 3));
+                controlConc.Text = String.Format("{0:f3}", c);
+
+                PointPairList res = new PointPairList();
+                res.Add(0, dd);
+                res.Add(c, dd);
+                res.Add(c, 0);
+                
+
+                zxc = new Form2(pa, pb, pc, list1, res);
+                zxc.Show();
+
+                // y = ax^2 + bx + c
             }
         }
 
-        public static double SolveQuadratic(double a, double b, double c)
+        public void firstPart()
         {
+            list1.Clear();
+            for (int i = 1; i <= Convert.ToInt32(textBox14.Text); i++)
+            {
+                string controlNameC = "c" + i;
+                var controls = this.Controls.Find(controlNameC, true);
+                var control = controls.FirstOrDefault();
+                double.TryParse(control.Text.Replace('.', ','), out double c);
+                string controlNameD1 = "d" + i + "1";
+                string controlNameD2 = "d" + i + "2";
+                var controlsD1 = this.Controls.Find(controlNameD1, true);
+                var controlD1 = controlsD1.FirstOrDefault();
+                var controlsD2 = this.Controls.Find(controlNameD2, true);
+                var controlD2 = controlsD2.FirstOrDefault();
+                double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
+                double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
+                double dd = (d1 + d2) / 2;
+                list1.Add(c, dd);
+            }
+            IList<double> XandY = PP.PPToAxe(list1);
+
+            Eapp epp = new Eapp();
+            double[] X = new double[XandY.Count / 2];
+            double[] Y = new double[XandY.Count / 2];
+            for (int i = 0; i < XandY.Count / 2; i++)
+            {
+                X[i] = XandY[i];
+                Y[i] = XandY[i + XandY.Count / 2];
+
+            }
+            pa = 0;
+            pb = 0;
+            pc = 0;
+            epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
+
+        }
+
+        public static double SolveQuadratic(double a, double b, double c, double y)
+        {
+            c = c - y;
             double sqrtpart = b * b - 4 * a * c;
             double x, x1, x2;
             if (sqrtpart > 0)

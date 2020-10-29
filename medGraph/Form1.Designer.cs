@@ -53,14 +53,6 @@
             this.d12 = new System.Windows.Forms.TextBox();
             this.d11 = new System.Windows.Forms.TextBox();
             this.c1 = new System.Windows.Forms.TextBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.ed21 = new System.Windows.Forms.RichTextBox();
-            this.ed22 = new System.Windows.Forms.RichTextBox();
-            this.resultD2 = new System.Windows.Forms.RichTextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -82,6 +74,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.conc2 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ed21 = new System.Windows.Forms.RichTextBox();
+            this.ed22 = new System.Windows.Forms.RichTextBox();
+            this.resultD2 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabIgG.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -89,9 +89,9 @@
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIgM
@@ -118,8 +118,8 @@
             // tabIgG
             // 
             this.tabIgG.AutoScroll = true;
+            this.tabIgG.Controls.Add(this.panel4);
             this.tabIgG.Controls.Add(this.panel2);
-            this.tabIgG.Controls.Add(this.panel12);
             this.tabIgG.Controls.Add(this.label22);
             this.tabIgG.Controls.Add(this.button8);
             this.tabIgG.Controls.Add(this.label21);
@@ -359,87 +359,6 @@
             this.c1.TabIndex = 100;
             this.c1.Text = "1,5";
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.richTextBox3);
-            this.panel12.Controls.Add(this.label23);
-            this.panel12.Controls.Add(this.ed21);
-            this.panel12.Controls.Add(this.ed22);
-            this.panel12.Controls.Add(this.resultD2);
-            this.panel12.Controls.Add(this.label24);
-            this.panel12.Controls.Add(this.label25);
-            this.panel12.Location = new System.Drawing.Point(349, 143);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(225, 53);
-            this.panel12.TabIndex = 25;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(148, 8);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(59, 32);
-            this.richTextBox3.TabIndex = 24;
-            this.richTextBox3.Text = "";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 16);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(16, 17);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "1";
-            // 
-            // ed21
-            // 
-            this.ed21.Location = new System.Drawing.Point(63, 9);
-            this.ed21.Margin = new System.Windows.Forms.Padding(2);
-            this.ed21.Name = "ed21";
-            this.ed21.Size = new System.Drawing.Size(43, 17);
-            this.ed21.TabIndex = 22;
-            this.ed21.Text = "0";
-            // 
-            // ed22
-            // 
-            this.ed22.Location = new System.Drawing.Point(63, 24);
-            this.ed22.Margin = new System.Windows.Forms.Padding(2);
-            this.ed22.Name = "ed22";
-            this.ed22.Size = new System.Drawing.Size(43, 17);
-            this.ed22.TabIndex = 21;
-            this.ed22.Text = "0";
-            // 
-            // resultD2
-            // 
-            this.resultD2.Location = new System.Drawing.Point(108, 9);
-            this.resultD2.Margin = new System.Windows.Forms.Padding(2);
-            this.resultD2.Name = "resultD2";
-            this.resultD2.Size = new System.Drawing.Size(38, 32);
-            this.resultD2.TabIndex = 20;
-            this.resultD2.Text = "";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(22, 11);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 17);
-            this.label24.TabIndex = 13;
-            this.label24.Text = "Больший";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(21, 26);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 17);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "Меньший";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -452,7 +371,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(348, 216);
+            this.button8.Location = new System.Drawing.Point(344, 248);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(225, 27);
@@ -478,7 +397,7 @@
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(22, 23);
             this.textBox48.TabIndex = 19;
-            this.textBox48.Text = "1";
+            this.textBox48.Text = "2";
             // 
             // textBox14
             // 
@@ -521,7 +440,7 @@
             this.panel11.Location = new System.Drawing.Point(348, 63);
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(386, 76);
+            this.panel11.Size = new System.Drawing.Size(492, 76);
             this.panel11.TabIndex = 16;
             // 
             // conc1
@@ -529,7 +448,7 @@
             this.conc1.Location = new System.Drawing.Point(298, 8);
             this.conc1.Margin = new System.Windows.Forms.Padding(2);
             this.conc1.Name = "conc1";
-            this.conc1.Size = new System.Drawing.Size(59, 32);
+            this.conc1.Size = new System.Drawing.Size(190, 32);
             this.conc1.TabIndex = 24;
             this.conc1.Text = "";
             // 
@@ -545,21 +464,21 @@
             // 
             // ed11
             // 
-            this.ed11.Location = new System.Drawing.Point(141, 11);
+            this.ed11.Location = new System.Drawing.Point(128, 8);
             this.ed11.Margin = new System.Windows.Forms.Padding(2);
             this.ed11.Name = "ed11";
-            this.ed11.Size = new System.Drawing.Size(43, 22);
+            this.ed11.Size = new System.Drawing.Size(43, 32);
             this.ed11.TabIndex = 22;
-            this.ed11.Text = "0";
+            this.ed11.Text = "55";
             // 
             // ed12
             // 
-            this.ed12.Location = new System.Drawing.Point(141, 37);
+            this.ed12.Location = new System.Drawing.Point(128, 40);
             this.ed12.Margin = new System.Windows.Forms.Padding(2);
             this.ed12.Name = "ed12";
-            this.ed12.Size = new System.Drawing.Size(43, 23);
+            this.ed12.Size = new System.Drawing.Size(43, 27);
             this.ed12.TabIndex = 21;
-            this.ed12.Text = "0";
+            this.ed12.Text = "1,5";
             // 
             // resultD1
             // 
@@ -654,6 +573,87 @@
             this.tabControl1.Size = new System.Drawing.Size(1076, 464);
             this.tabControl1.TabIndex = 12;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.conc2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.ed21);
+            this.panel4.Controls.Add(this.ed22);
+            this.panel4.Controls.Add(this.resultD2);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(348, 143);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(492, 76);
+            this.panel4.TabIndex = 25;
+            // 
+            // conc2
+            // 
+            this.conc2.Location = new System.Drawing.Point(298, 8);
+            this.conc2.Margin = new System.Windows.Forms.Padding(2);
+            this.conc2.Name = "conc2";
+            this.conc2.Size = new System.Drawing.Size(190, 32);
+            this.conc2.TabIndex = 24;
+            this.conc2.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "2";
+            // 
+            // ed21
+            // 
+            this.ed21.Location = new System.Drawing.Point(128, 8);
+            this.ed21.Margin = new System.Windows.Forms.Padding(2);
+            this.ed21.Name = "ed21";
+            this.ed21.Size = new System.Drawing.Size(43, 32);
+            this.ed21.TabIndex = 22;
+            this.ed21.Text = "30";
+            // 
+            // ed22
+            // 
+            this.ed22.Location = new System.Drawing.Point(128, 40);
+            this.ed22.Margin = new System.Windows.Forms.Padding(2);
+            this.ed22.Name = "ed22";
+            this.ed22.Size = new System.Drawing.Size(43, 27);
+            this.ed22.TabIndex = 21;
+            this.ed22.Text = "4,5";
+            // 
+            // resultD2
+            // 
+            this.resultD2.Location = new System.Drawing.Point(212, 9);
+            this.resultD2.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD2.Name = "resultD2";
+            this.resultD2.Size = new System.Drawing.Size(38, 32);
+            this.resultD2.TabIndex = 20;
+            this.resultD2.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Больший";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Меньший";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -678,11 +678,11 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -692,14 +692,6 @@
         private System.Windows.Forms.TabPage tabIgM;
         private System.Windows.Forms.TabPage tabIgA;
         private System.Windows.Forms.TabPage tabIgG;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RichTextBox ed21;
-        private System.Windows.Forms.RichTextBox ed22;
-        private System.Windows.Forms.RichTextBox resultD2;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label21;
@@ -742,6 +734,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RichTextBox conc2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox ed21;
+        private System.Windows.Forms.RichTextBox ed22;
+        private System.Windows.Forms.RichTextBox resultD2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

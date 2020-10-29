@@ -20,7 +20,7 @@ namespace medGraph
         }
 
         
-        public Form2(double pa, double pb, double pc, PointPairList list1)
+        public Form2(double pa, double pb, double pc, PointPairList list1, PointPairList res)
         {
             list1.Sort();
             InitializeComponent();
@@ -50,6 +50,9 @@ namespace medGraph
             // Опорные точки - ромбики (SymbolType.Diamond)
             LineItem myCurve = pane.AddCurve("Аппроксимация", p, Color.Black, SymbolType.None);
             LineItem myCurve1 = pane.AddCurve("Эксперементальные данные", list1, Color.BlueViolet, SymbolType.Circle);
+
+
+            LineItem myCurve2 = pane.AddCurve("Проекция", res, Color.DarkGray, SymbolType.None);
 
 
 
