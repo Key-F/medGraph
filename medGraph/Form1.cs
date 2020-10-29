@@ -17,7 +17,8 @@ namespace medGraph
     {
         
         PointPairList list1 = new PointPairList();
-        List<double> En = new List<double>();
+        double pa, pb, pc;
+      
         public Form1()
         {
             InitializeComponent();
@@ -52,26 +53,12 @@ namespace medGraph
                 Y[i] = XandY[i + XandY.Count / 2];
 
             }
-            //double[] func = new double[2];
-            double pa = 0, pb = 0, pc = 0;
+            pa = 0;
+            pb = 0; 
+            pc = 0;
             epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
 
-            double f = XandY[0];
-            double a1=0, a2=0, a3=0, a4=0, b, o;
-            for (int i = 0; i < XandY.Count/2; i++)
-            {
-                a1 = a1 + XandY[i] * Math.Log(XandY[i + XandY.Count / 2]);
-                a2 = a2 + XandY[i];
-                a3 = a3 + Math.Log(XandY[i + XandY.Count / 2]);
-                a4 += XandY[i] * XandY[i];
-               
-            }
-            b = (XandY.Count / 2 * a1 - a2 * a3)/(XandY.Count/2 * a4 - Math.Pow(a2, 2));
-            o = (1 / (XandY.Count / 2))* a3 - (b / (XandY.Count / 2))*a2;
-
-            PP p = new PP(list1);
-            Math.Log(5);
-          
+           
             Form2 zxc = new Form2(pa, pb, pc, list1);
             zxc.Show();
         }
@@ -92,10 +79,32 @@ namespace medGraph
                 var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
                 var controlresultD = controlsNameresultD.FirstOrDefault();
                 controlresultD.Text = Convert.ToString(dd);
+                double c = SolveQuadratic(pa, pb, pc);
+                string contolNameConc = "conc" + i;
+                var controlsConc = this.Controls.Find(contolNameConc, true);
+                var controlConc = controlsConc.FirstOrDefault();
+                controlConc.Text = Convert.ToString(c);
+
             }
         }
 
- 
+        public static double SolveQuadratic(double a, double b, double c)
+        {
+            double sqrtpart = b * b - 4 * a * c;
+            double x, x1, x2;
+            if (sqrtpart > 0)
+            { 
+                x1 = (-b + System.Math.Sqrt(sqrtpart)) / (2 * a);
+                if (x1 > 0) return x1;
+                x2 = (-b - System.Math.Sqrt(sqrtpart)) / (2 * a);
+                return x2;
+            }
+            else
+            {
+                x = (-b + System.Math.Sqrt(sqrtpart)) / (2 * a);
+                return x;
+            }
+        }
     }
 
    
