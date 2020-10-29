@@ -28,47 +28,28 @@ namespace medGraph
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Application.OpenForms
+               .OfType<Form>()
+               .Where(form => String.Equals(form.Name, "Form2"))
+               .ToList()
+               .ForEach(form => form.Close());
             firstPart();
             zxc = new Form2(pa, pb, pc, list1, null);
             zxc.Show();
         }
 
-
         private void button8_Click(object sender, EventArgs e)
         {
-            if (zxc != null) zxc.Close();
+            Application.OpenForms
+                .OfType<Form>()
+                .Where(form => String.Equals(form.Name, "Form2"))
+                .ToList()
+                .ForEach(form => form.Close());
             firstPart();
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
-            {
-                string controlNameD1 = "ed" + i + "1";
-                string controlNameD2 = "ed" + i + "2";
-                var controlsD1 = this.Controls.Find(controlNameD1, true);
-                var controlD1 = controlsD1.FirstOrDefault();
-                var controlsD2 = this.Controls.Find(controlNameD2, true);
-                var controlD2 = controlsD2.FirstOrDefault();
-                double dd = (Convert.ToDouble(controlD1.Text) - Convert.ToDouble(controlD2.Text));
-                string controlNameresultD = "resultD" + i;
-                var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
-                var controlresultD = controlsNameresultD.FirstOrDefault();
-                controlresultD.Text = Convert.ToString(dd);
-                double c = SolveQuadratic(pa, pb, pc, dd);
-                string contolNameConc = "conc" + i;
-                var controlsConc = this.Controls.Find(contolNameConc, true);
-                var controlConc = controlsConc.FirstOrDefault();
-
-                //controlConc.Text = Convert.ToString(Math.Round(c, 3));
-                controlConc.Text = String.Format("{0:f3}", c);
-
-                PointPairList res = new PointPairList();
-                res.Add(0, dd);
-                res.Add(c, dd);
-                res.Add(c, 0);
-                
-
-                zxc = new Form2(pa, pb, pc, list1, res);
+            {                
+                zxc = new Form2(pa, pb, pc, list1, secondPart(i));
                 zxc.Show();
-
-                // y = ax^2 + bx + c
             }
         }
 
@@ -108,6 +89,36 @@ namespace medGraph
             pc = 0;
             epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
 
+        }
+
+        public PointPairList secondPart(int i)
+        {
+            string controlNameD1 = "ed" + i + "1";
+            string controlNameD2 = "ed" + i + "2";
+            var controlsD1 = this.Controls.Find(controlNameD1, true);
+            var controlD1 = controlsD1.FirstOrDefault();
+            var controlsD2 = this.Controls.Find(controlNameD2, true);
+            var controlD2 = controlsD2.FirstOrDefault();
+            double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
+            double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
+            double dd = (d1 - d2);
+            string controlNameresultD = "resultD" + i;
+            var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
+            var controlresultD = controlsNameresultD.FirstOrDefault();
+            controlresultD.Text = Convert.ToString(dd);
+            double c = SolveQuadratic(pa, pb, pc, dd);
+            string contolNameConc = "conc" + i;
+            var controlsConc = this.Controls.Find(contolNameConc, true);
+            var controlConc = controlsConc.FirstOrDefault();
+
+            //controlConc.Text = Convert.ToString(Math.Round(c, 3));
+            controlConc.Text = String.Format("{0:f3}", c);
+
+            PointPairList res = new PointPairList();
+            res.Add(0, dd);
+            res.Add(c, dd);
+            res.Add(c, 0);
+            return res;
         }
 
         public static double SolveQuadratic(double a, double b, double c, double y)
