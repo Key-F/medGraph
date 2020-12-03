@@ -20,8 +20,9 @@ namespace medGraph
         }
 
         
-        public Form2(double pa, double pb, double pc, PointPairList list1, PointPairList res)
+        public Form2(double pa, double pb, double pc, PointPairList list1, PointPairList res, int num)
         {
+           
             list1.Sort();
             InitializeComponent();
             GraphPane pane = zedGraphControl1.GraphPane;
@@ -39,8 +40,12 @@ namespace medGraph
             pane.XAxis.Title.Text = "C"; //подпись оси X
             pane.YAxis.Title.Text = "D"; //подпись оси Y
 
-            pane.Title.Text = "le graffique";
-
+            if (num != 0)
+            {
+                pane.Title.Text = "Номер пробы: " + num;
+                this.Text = "Номер пробы: " + num;
+            }
+            else pane.Title.Text = "le graffique";
 
             // Очистим список кривых 
             pane.CurveList.Clear();

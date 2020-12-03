@@ -34,7 +34,7 @@ namespace medGraph
                .ToList()
                .ForEach(form => form.Close());
             firstPart();
-            zxc = new Form2(pa, pb, pc, list1, null);
+            zxc = new Form2(pa, pb, pc, list1, null, 0);
             zxc.Show();
         }
 
@@ -48,7 +48,7 @@ namespace medGraph
             firstPart();
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {                
-                zxc = new Form2(pa, pb, pc, list1, secondPart(i));
+                zxc = new Form2(pa, pb, pc, list1, secondPart(i), i);
                 zxc.Show();
             }
         }
