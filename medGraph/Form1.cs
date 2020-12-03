@@ -91,6 +91,15 @@ namespace medGraph
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+          //  Properties.Settings.Default.
+           // Properties.Settings.Default.pictues = checkBox7.Checked;
+            //Properties.Settings.Default.ontop = checkBox6.Checked;
+            //Properties.Settings.Default.Save();
+        }
+
         public PointPairList secondPart(int i)
         {
             string controlNameD1 = "ed" + i + "1";

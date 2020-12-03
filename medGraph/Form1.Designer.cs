@@ -32,6 +32,14 @@
             this.tabIgM = new System.Windows.Forms.TabPage();
             this.tabIgA = new System.Windows.Forms.TabPage();
             this.tabIgG = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.conc2 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ed21 = new System.Windows.Forms.RichTextBox();
+            this.ed22 = new System.Windows.Forms.RichTextBox();
+            this.resultD2 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.d52 = new System.Windows.Forms.TextBox();
@@ -74,15 +82,60 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.conc2 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ed21 = new System.Windows.Forms.RichTextBox();
-            this.ed22 = new System.Windows.Forms.RichTextBox();
-            this.resultD2 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.d62 = new System.Windows.Forms.TextBox();
+            this.d61 = new System.Windows.Forms.TextBox();
+            this.c6 = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.conc3 = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ed31 = new System.Windows.Forms.RichTextBox();
+            this.ed32 = new System.Windows.Forms.RichTextBox();
+            this.resultD3 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.conc4 = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ed41 = new System.Windows.Forms.RichTextBox();
+            this.ed42 = new System.Windows.Forms.RichTextBox();
+            this.resultD4 = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.conc5 = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ed51 = new System.Windows.Forms.RichTextBox();
+            this.ed52 = new System.Windows.Forms.RichTextBox();
+            this.resultD5 = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.conc6 = new System.Windows.Forms.RichTextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.ed61 = new System.Windows.Forms.RichTextBox();
+            this.ed62 = new System.Windows.Forms.RichTextBox();
+            this.resultD6 = new System.Windows.Forms.RichTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.conc7 = new System.Windows.Forms.RichTextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ed71 = new System.Windows.Forms.RichTextBox();
+            this.ed72 = new System.Windows.Forms.RichTextBox();
+            this.resultD7 = new System.Windows.Forms.RichTextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.conc8 = new System.Windows.Forms.RichTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.ed81 = new System.Windows.Forms.RichTextBox();
+            this.ed82 = new System.Windows.Forms.RichTextBox();
+            this.resultD8 = new System.Windows.Forms.RichTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.tabIgG.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -91,7 +144,13 @@
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIgM
@@ -118,6 +177,12 @@
             // tabIgG
             // 
             this.tabIgG.AutoScroll = true;
+            this.tabIgG.Controls.Add(this.panel15);
+            this.tabIgG.Controls.Add(this.panel14);
+            this.tabIgG.Controls.Add(this.panel13);
+            this.tabIgG.Controls.Add(this.panel12);
+            this.tabIgG.Controls.Add(this.panel10);
+            this.tabIgG.Controls.Add(this.panel8);
             this.tabIgG.Controls.Add(this.panel4);
             this.tabIgG.Controls.Add(this.panel2);
             this.tabIgG.Controls.Add(this.label22);
@@ -137,14 +202,98 @@
             this.tabIgG.Margin = new System.Windows.Forms.Padding(2);
             this.tabIgG.Name = "tabIgG";
             this.tabIgG.Padding = new System.Windows.Forms.Padding(2);
-            this.tabIgG.Size = new System.Drawing.Size(1068, 434);
+            this.tabIgG.Size = new System.Drawing.Size(873, 739);
             this.tabIgG.TabIndex = 1;
             this.tabIgG.Text = "IgG";
             this.tabIgG.UseVisualStyleBackColor = true;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.conc2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.ed21);
+            this.panel4.Controls.Add(this.ed22);
+            this.panel4.Controls.Add(this.resultD2);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(348, 143);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(492, 76);
+            this.panel4.TabIndex = 25;
+            // 
+            // conc2
+            // 
+            this.conc2.Location = new System.Drawing.Point(298, 8);
+            this.conc2.Margin = new System.Windows.Forms.Padding(2);
+            this.conc2.Name = "conc2";
+            this.conc2.Size = new System.Drawing.Size(190, 32);
+            this.conc2.TabIndex = 24;
+            this.conc2.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "2";
+            // 
+            // ed21
+            // 
+            this.ed21.Location = new System.Drawing.Point(128, 8);
+            this.ed21.Margin = new System.Windows.Forms.Padding(2);
+            this.ed21.Name = "ed21";
+            this.ed21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed21.Size = new System.Drawing.Size(43, 32);
+            this.ed21.TabIndex = 22;
+            this.ed21.Text = "30";
+            // 
+            // ed22
+            // 
+            this.ed22.Location = new System.Drawing.Point(128, 40);
+            this.ed22.Margin = new System.Windows.Forms.Padding(2);
+            this.ed22.Name = "ed22";
+            this.ed22.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed22.Size = new System.Drawing.Size(43, 27);
+            this.ed22.TabIndex = 21;
+            this.ed22.Text = "4,5";
+            // 
+            // resultD2
+            // 
+            this.resultD2.Location = new System.Drawing.Point(212, 9);
+            this.resultD2.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD2.Name = "resultD2";
+            this.resultD2.Size = new System.Drawing.Size(38, 32);
+            this.resultD2.TabIndex = 20;
+            this.resultD2.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Больший";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Меньший";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel5);
@@ -152,7 +301,7 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Location = new System.Drawing.Point(5, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 296);
+            this.panel2.Size = new System.Drawing.Size(220, 328);
             this.panel2.TabIndex = 26;
             // 
             // panel9
@@ -371,10 +520,10 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(344, 248);
+            this.button8.Location = new System.Drawing.Point(348, 704);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(225, 27);
+            this.button8.Size = new System.Drawing.Size(492, 27);
             this.button8.TabIndex = 21;
             this.button8.Text = "Результат";
             this.button8.UseVisualStyleBackColor = true;
@@ -397,7 +546,8 @@
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(22, 23);
             this.textBox48.TabIndex = 19;
-            this.textBox48.Text = "2";
+            this.textBox48.Text = "8";
+            this.textBox48.Visible = false;
             // 
             // textBox14
             // 
@@ -406,7 +556,8 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(22, 23);
             this.textBox14.TabIndex = 1;
-            this.textBox14.Text = "5";
+            this.textBox14.Text = "6";
+            this.textBox14.Visible = false;
             // 
             // label19
             // 
@@ -467,6 +618,7 @@
             this.ed11.Location = new System.Drawing.Point(128, 8);
             this.ed11.Margin = new System.Windows.Forms.Padding(2);
             this.ed11.Name = "ed11";
+            this.ed11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.ed11.Size = new System.Drawing.Size(43, 32);
             this.ed11.TabIndex = 22;
             this.ed11.Text = "55";
@@ -476,6 +628,7 @@
             this.ed12.Location = new System.Drawing.Point(128, 40);
             this.ed12.Margin = new System.Windows.Forms.Padding(2);
             this.ed12.Name = "ed12";
+            this.ed12.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.ed12.Size = new System.Drawing.Size(43, 27);
             this.ed12.TabIndex = 21;
             this.ed12.Text = "1,5";
@@ -521,7 +674,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(7, 389);
+            this.button7.Location = new System.Drawing.Point(8, 432);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(217, 25);
@@ -570,103 +723,564 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1076, 464);
+            this.tabControl1.Size = new System.Drawing.Size(881, 769);
             this.tabControl1.TabIndex = 12;
             // 
-            // panel4
+            // panel6
             // 
-            this.panel4.Controls.Add(this.conc2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.ed21);
-            this.panel4.Controls.Add(this.ed22);
-            this.panel4.Controls.Add(this.resultD2);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(348, 143);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 76);
-            this.panel4.TabIndex = 25;
+            this.panel6.Controls.Add(this.d62);
+            this.panel6.Controls.Add(this.d61);
+            this.panel6.Controls.Add(this.c6);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 270);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(218, 54);
+            this.panel6.TabIndex = 6;
             // 
-            // conc2
+            // d62
             // 
-            this.conc2.Location = new System.Drawing.Point(298, 8);
-            this.conc2.Margin = new System.Windows.Forms.Padding(2);
-            this.conc2.Name = "conc2";
-            this.conc2.Size = new System.Drawing.Size(190, 32);
-            this.conc2.TabIndex = 24;
-            this.conc2.Text = "";
+            this.d62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.d62.Location = new System.Drawing.Point(146, 29);
+            this.d62.Margin = new System.Windows.Forms.Padding(2);
+            this.d62.Name = "d62";
+            this.d62.Size = new System.Drawing.Size(70, 23);
+            this.d62.TabIndex = 114;
+            this.d62.Text = "56,25";
             // 
-            // label1
+            // d61
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 17);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "2";
+            this.d61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.d61.Location = new System.Drawing.Point(146, 2);
+            this.d61.Margin = new System.Windows.Forms.Padding(2);
+            this.d61.Name = "d61";
+            this.d61.Size = new System.Drawing.Size(70, 23);
+            this.d61.TabIndex = 113;
+            this.d61.Text = "56,25";
             // 
-            // ed21
+            // c6
             // 
-            this.ed21.Location = new System.Drawing.Point(128, 8);
-            this.ed21.Margin = new System.Windows.Forms.Padding(2);
-            this.ed21.Name = "ed21";
-            this.ed21.Size = new System.Drawing.Size(43, 32);
-            this.ed21.TabIndex = 22;
-            this.ed21.Text = "30";
+            this.c6.Location = new System.Drawing.Point(2, 15);
+            this.c6.Margin = new System.Windows.Forms.Padding(2);
+            this.c6.Name = "c6";
+            this.c6.Size = new System.Drawing.Size(61, 23);
+            this.c6.TabIndex = 112;
+            this.c6.Text = "7,5";
             // 
-            // ed22
+            // panel8
             // 
-            this.ed22.Location = new System.Drawing.Point(128, 40);
-            this.ed22.Margin = new System.Windows.Forms.Padding(2);
-            this.ed22.Name = "ed22";
-            this.ed22.Size = new System.Drawing.Size(43, 27);
-            this.ed22.TabIndex = 21;
-            this.ed22.Text = "4,5";
+            this.panel8.Controls.Add(this.conc3);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.ed31);
+            this.panel8.Controls.Add(this.ed32);
+            this.panel8.Controls.Add(this.resultD3);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Location = new System.Drawing.Point(348, 223);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(492, 76);
+            this.panel8.TabIndex = 26;
             // 
-            // resultD2
+            // conc3
             // 
-            this.resultD2.Location = new System.Drawing.Point(212, 9);
-            this.resultD2.Margin = new System.Windows.Forms.Padding(2);
-            this.resultD2.Name = "resultD2";
-            this.resultD2.Size = new System.Drawing.Size(38, 32);
-            this.resultD2.TabIndex = 20;
-            this.resultD2.Text = "";
+            this.conc3.Location = new System.Drawing.Point(298, 8);
+            this.conc3.Margin = new System.Windows.Forms.Padding(2);
+            this.conc3.Name = "conc3";
+            this.conc3.Size = new System.Drawing.Size(190, 32);
+            this.conc3.TabIndex = 24;
+            this.conc3.Text = "";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Больший";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 17);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "3";
             // 
-            // label3
+            // ed31
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Меньший";
+            this.ed31.Location = new System.Drawing.Point(128, 8);
+            this.ed31.Margin = new System.Windows.Forms.Padding(2);
+            this.ed31.Name = "ed31";
+            this.ed31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed31.Size = new System.Drawing.Size(43, 32);
+            this.ed31.TabIndex = 22;
+            this.ed31.Text = "30";
+            // 
+            // ed32
+            // 
+            this.ed32.Location = new System.Drawing.Point(128, 40);
+            this.ed32.Margin = new System.Windows.Forms.Padding(2);
+            this.ed32.Name = "ed32";
+            this.ed32.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed32.Size = new System.Drawing.Size(43, 27);
+            this.ed32.TabIndex = 21;
+            this.ed32.Text = "4,5";
+            // 
+            // resultD3
+            // 
+            this.resultD3.Location = new System.Drawing.Point(212, 9);
+            this.resultD3.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD3.Name = "resultD3";
+            this.resultD3.Size = new System.Drawing.Size(38, 32);
+            this.resultD3.TabIndex = 20;
+            this.resultD3.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Больший";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(38, 40);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Меньший";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.conc4);
+            this.panel10.Controls.Add(this.label7);
+            this.panel10.Controls.Add(this.ed41);
+            this.panel10.Controls.Add(this.ed42);
+            this.panel10.Controls.Add(this.resultD4);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Location = new System.Drawing.Point(348, 303);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(492, 76);
+            this.panel10.TabIndex = 27;
+            // 
+            // conc4
+            // 
+            this.conc4.Location = new System.Drawing.Point(298, 8);
+            this.conc4.Margin = new System.Windows.Forms.Padding(2);
+            this.conc4.Name = "conc4";
+            this.conc4.Size = new System.Drawing.Size(190, 32);
+            this.conc4.TabIndex = 24;
+            this.conc4.Text = "";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 16);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 17);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "4";
+            // 
+            // ed41
+            // 
+            this.ed41.Location = new System.Drawing.Point(128, 8);
+            this.ed41.Margin = new System.Windows.Forms.Padding(2);
+            this.ed41.Name = "ed41";
+            this.ed41.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed41.Size = new System.Drawing.Size(43, 32);
+            this.ed41.TabIndex = 22;
+            this.ed41.Text = "30";
+            // 
+            // ed42
+            // 
+            this.ed42.Location = new System.Drawing.Point(128, 40);
+            this.ed42.Margin = new System.Windows.Forms.Padding(2);
+            this.ed42.Name = "ed42";
+            this.ed42.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed42.Size = new System.Drawing.Size(43, 27);
+            this.ed42.TabIndex = 21;
+            this.ed42.Text = "4,5";
+            // 
+            // resultD4
+            // 
+            this.resultD4.Location = new System.Drawing.Point(212, 9);
+            this.resultD4.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD4.Name = "resultD4";
+            this.resultD4.Size = new System.Drawing.Size(38, 32);
+            this.resultD4.TabIndex = 20;
+            this.resultD4.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(40, 16);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 17);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Больший";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(38, 40);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 17);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Меньший";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.conc5);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Controls.Add(this.ed51);
+            this.panel12.Controls.Add(this.ed52);
+            this.panel12.Controls.Add(this.resultD5);
+            this.panel12.Controls.Add(this.label11);
+            this.panel12.Controls.Add(this.label23);
+            this.panel12.Location = new System.Drawing.Point(348, 383);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(492, 76);
+            this.panel12.TabIndex = 28;
+            // 
+            // conc5
+            // 
+            this.conc5.Location = new System.Drawing.Point(298, 8);
+            this.conc5.Margin = new System.Windows.Forms.Padding(2);
+            this.conc5.Name = "conc5";
+            this.conc5.Size = new System.Drawing.Size(190, 32);
+            this.conc5.TabIndex = 24;
+            this.conc5.Text = "";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 16);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 17);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "5";
+            // 
+            // ed51
+            // 
+            this.ed51.Location = new System.Drawing.Point(128, 8);
+            this.ed51.Margin = new System.Windows.Forms.Padding(2);
+            this.ed51.Name = "ed51";
+            this.ed51.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed51.Size = new System.Drawing.Size(43, 32);
+            this.ed51.TabIndex = 22;
+            this.ed51.Text = "30";
+            // 
+            // ed52
+            // 
+            this.ed52.Location = new System.Drawing.Point(128, 40);
+            this.ed52.Margin = new System.Windows.Forms.Padding(2);
+            this.ed52.Name = "ed52";
+            this.ed52.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed52.Size = new System.Drawing.Size(43, 27);
+            this.ed52.TabIndex = 21;
+            this.ed52.Text = "4,5";
+            // 
+            // resultD5
+            // 
+            this.resultD5.Location = new System.Drawing.Point(212, 9);
+            this.resultD5.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD5.Name = "resultD5";
+            this.resultD5.Size = new System.Drawing.Size(38, 32);
+            this.resultD5.TabIndex = 20;
+            this.resultD5.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(40, 16);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 17);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Больший";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(38, 40);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(69, 17);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Меньший";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.conc6);
+            this.panel13.Controls.Add(this.label24);
+            this.panel13.Controls.Add(this.ed61);
+            this.panel13.Controls.Add(this.ed62);
+            this.panel13.Controls.Add(this.resultD6);
+            this.panel13.Controls.Add(this.label25);
+            this.panel13.Controls.Add(this.label26);
+            this.panel13.Location = new System.Drawing.Point(348, 463);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(492, 76);
+            this.panel13.TabIndex = 29;
+            // 
+            // conc6
+            // 
+            this.conc6.Location = new System.Drawing.Point(298, 8);
+            this.conc6.Margin = new System.Windows.Forms.Padding(2);
+            this.conc6.Name = "conc6";
+            this.conc6.Size = new System.Drawing.Size(190, 32);
+            this.conc6.TabIndex = 24;
+            this.conc6.Text = "";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 16);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(16, 17);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "6";
+            // 
+            // ed61
+            // 
+            this.ed61.Location = new System.Drawing.Point(128, 8);
+            this.ed61.Margin = new System.Windows.Forms.Padding(2);
+            this.ed61.Name = "ed61";
+            this.ed61.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed61.Size = new System.Drawing.Size(43, 32);
+            this.ed61.TabIndex = 22;
+            this.ed61.Text = "30";
+            // 
+            // ed62
+            // 
+            this.ed62.Location = new System.Drawing.Point(128, 40);
+            this.ed62.Margin = new System.Windows.Forms.Padding(2);
+            this.ed62.Name = "ed62";
+            this.ed62.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed62.Size = new System.Drawing.Size(43, 27);
+            this.ed62.TabIndex = 21;
+            this.ed62.Text = "4,5";
+            // 
+            // resultD6
+            // 
+            this.resultD6.Location = new System.Drawing.Point(212, 9);
+            this.resultD6.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD6.Name = "resultD6";
+            this.resultD6.Size = new System.Drawing.Size(38, 32);
+            this.resultD6.TabIndex = 20;
+            this.resultD6.Text = "";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(40, 16);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(67, 17);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Больший";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(38, 40);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 17);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "Меньший";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.conc7);
+            this.panel14.Controls.Add(this.label27);
+            this.panel14.Controls.Add(this.ed71);
+            this.panel14.Controls.Add(this.ed72);
+            this.panel14.Controls.Add(this.resultD7);
+            this.panel14.Controls.Add(this.label28);
+            this.panel14.Controls.Add(this.label29);
+            this.panel14.Location = new System.Drawing.Point(348, 543);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(492, 76);
+            this.panel14.TabIndex = 30;
+            // 
+            // conc7
+            // 
+            this.conc7.Location = new System.Drawing.Point(298, 8);
+            this.conc7.Margin = new System.Windows.Forms.Padding(2);
+            this.conc7.Name = "conc7";
+            this.conc7.Size = new System.Drawing.Size(190, 32);
+            this.conc7.TabIndex = 24;
+            this.conc7.Text = "";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(10, 16);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(16, 17);
+            this.label27.TabIndex = 23;
+            this.label27.Text = "7";
+            // 
+            // ed71
+            // 
+            this.ed71.Location = new System.Drawing.Point(128, 8);
+            this.ed71.Margin = new System.Windows.Forms.Padding(2);
+            this.ed71.Name = "ed71";
+            this.ed71.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed71.Size = new System.Drawing.Size(43, 32);
+            this.ed71.TabIndex = 22;
+            this.ed71.Text = "30";
+            // 
+            // ed72
+            // 
+            this.ed72.Location = new System.Drawing.Point(128, 40);
+            this.ed72.Margin = new System.Windows.Forms.Padding(2);
+            this.ed72.Name = "ed72";
+            this.ed72.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed72.Size = new System.Drawing.Size(43, 27);
+            this.ed72.TabIndex = 21;
+            this.ed72.Text = "4,5";
+            // 
+            // resultD7
+            // 
+            this.resultD7.Location = new System.Drawing.Point(212, 9);
+            this.resultD7.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD7.Name = "resultD7";
+            this.resultD7.Size = new System.Drawing.Size(38, 32);
+            this.resultD7.TabIndex = 20;
+            this.resultD7.Text = "";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(40, 16);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(67, 17);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "Больший";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(38, 40);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(69, 17);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Меньший";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.conc8);
+            this.panel15.Controls.Add(this.label30);
+            this.panel15.Controls.Add(this.ed81);
+            this.panel15.Controls.Add(this.ed82);
+            this.panel15.Controls.Add(this.resultD8);
+            this.panel15.Controls.Add(this.label31);
+            this.panel15.Controls.Add(this.label32);
+            this.panel15.Location = new System.Drawing.Point(348, 623);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(492, 76);
+            this.panel15.TabIndex = 31;
+            // 
+            // conc8
+            // 
+            this.conc8.Location = new System.Drawing.Point(298, 8);
+            this.conc8.Margin = new System.Windows.Forms.Padding(2);
+            this.conc8.Name = "conc8";
+            this.conc8.Size = new System.Drawing.Size(190, 32);
+            this.conc8.TabIndex = 24;
+            this.conc8.Text = "";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(10, 16);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(16, 17);
+            this.label30.TabIndex = 23;
+            this.label30.Text = "8";
+            // 
+            // ed81
+            // 
+            this.ed81.Location = new System.Drawing.Point(128, 8);
+            this.ed81.Margin = new System.Windows.Forms.Padding(2);
+            this.ed81.Name = "ed81";
+            this.ed81.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed81.Size = new System.Drawing.Size(43, 32);
+            this.ed81.TabIndex = 22;
+            this.ed81.Text = "30";
+            // 
+            // ed82
+            // 
+            this.ed82.Location = new System.Drawing.Point(128, 40);
+            this.ed82.Margin = new System.Windows.Forms.Padding(2);
+            this.ed82.Name = "ed82";
+            this.ed82.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ed82.Size = new System.Drawing.Size(43, 27);
+            this.ed82.TabIndex = 21;
+            this.ed82.Text = "4,5";
+            // 
+            // resultD8
+            // 
+            this.resultD8.Location = new System.Drawing.Point(212, 9);
+            this.resultD8.Margin = new System.Windows.Forms.Padding(2);
+            this.resultD8.Name = "resultD8";
+            this.resultD8.Size = new System.Drawing.Size(38, 32);
+            this.resultD8.TabIndex = 20;
+            this.resultD8.Text = "";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(40, 16);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(67, 17);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Больший";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(38, 40);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(69, 17);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Меньший";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 464);
+            this.ClientSize = new System.Drawing.Size(881, 769);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Back Propagation";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tabIgG.ResumeLayout(false);
             this.tabIgG.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -681,8 +1295,20 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -742,6 +1368,58 @@
         private System.Windows.Forms.RichTextBox resultD2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.RichTextBox conc8;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RichTextBox ed81;
+        private System.Windows.Forms.RichTextBox ed82;
+        private System.Windows.Forms.RichTextBox resultD8;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.RichTextBox conc7;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.RichTextBox ed71;
+        private System.Windows.Forms.RichTextBox ed72;
+        private System.Windows.Forms.RichTextBox resultD7;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.RichTextBox conc6;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.RichTextBox ed61;
+        private System.Windows.Forms.RichTextBox ed62;
+        private System.Windows.Forms.RichTextBox resultD6;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.RichTextBox conc5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RichTextBox ed51;
+        private System.Windows.Forms.RichTextBox ed52;
+        private System.Windows.Forms.RichTextBox resultD5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.RichTextBox conc4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox ed41;
+        private System.Windows.Forms.RichTextBox ed42;
+        private System.Windows.Forms.RichTextBox resultD4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.RichTextBox conc3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox ed31;
+        private System.Windows.Forms.RichTextBox ed32;
+        private System.Windows.Forms.RichTextBox resultD3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox d62;
+        private System.Windows.Forms.TextBox d61;
+        private System.Windows.Forms.TextBox c6;
     }
 }
 
