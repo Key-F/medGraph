@@ -336,6 +336,9 @@
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
             this.label96 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.tabIgM.SuspendLayout();
             this.tabIgA.SuspendLayout();
             this.tabIgG.SuspendLayout();
@@ -389,6 +392,7 @@
             // 
             // tabIgM
             // 
+            this.tabIgM.Controls.Add(this.button9);
             this.tabIgM.Controls.Add(this.panel31);
             this.tabIgM.Controls.Add(this.panel32);
             this.tabIgM.Controls.Add(this.panel33);
@@ -420,6 +424,7 @@
             // 
             // tabIgA
             // 
+            this.tabIgA.Controls.Add(this.button5);
             this.tabIgA.Controls.Add(this.panel16);
             this.tabIgA.Controls.Add(this.panel17);
             this.tabIgA.Controls.Add(this.panel18);
@@ -453,6 +458,7 @@
             // tabIgG
             // 
             this.tabIgG.AutoScroll = true;
+            this.tabIgG.Controls.Add(this.button6);
             this.tabIgG.Controls.Add(this.panel15);
             this.tabIgG.Controls.Add(this.panel14);
             this.tabIgG.Controls.Add(this.panel13);
@@ -1514,7 +1520,7 @@
             this.button7.Location = new System.Drawing.Point(11, 440);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(217, 25);
+            this.button7.Size = new System.Drawing.Size(217, 32);
             this.button7.TabIndex = 12;
             this.button7.Text = "Рассчет контроля";
             this.button7.UseVisualStyleBackColor = true;
@@ -2594,7 +2600,7 @@
             this.button2.Location = new System.Drawing.Point(11, 440);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 25);
+            this.button2.Size = new System.Drawing.Size(217, 32);
             this.button2.TabIndex = 36;
             this.button2.Text = "Рассчет контроля";
             this.button2.UseVisualStyleBackColor = true;
@@ -3661,7 +3667,7 @@
             this.button4.Location = new System.Drawing.Point(11, 440);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 25);
+            this.button4.Size = new System.Drawing.Size(217, 32);
             this.button4.TabIndex = 36;
             this.button4.Text = "Рассчет контроля";
             this.button4.UseVisualStyleBackColor = true;
@@ -3696,6 +3702,39 @@
             this.label96.Size = new System.Drawing.Size(71, 17);
             this.label96.TabIndex = 32;
             this.label96.Text = "Контроль";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(16, 496);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(208, 32);
+            this.button5.TabIndex = 53;
+            this.button5.Text = "Убрать графики";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(16, 496);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(208, 32);
+            this.button6.TabIndex = 54;
+            this.button6.Text = "Убрать графики";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(16, 496);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(208, 32);
+            this.button9.TabIndex = 54;
+            this.button9.Text = "Убрать графики";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 
@@ -4116,6 +4155,9 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

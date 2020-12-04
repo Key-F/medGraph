@@ -29,16 +29,12 @@ namespace medGraph
             {
                 FormSerialisor.Deserialise(this, Application.StartupPath + @"\serialise.xml");
             }
-            catch (Exception e) { }
+            catch (Exception e) { MessageBox.Show("Ошибка десериализации"); }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-               .OfType<Form>()
-               .Where(form => String.Equals(form.Name, "Form2"))
-               .ToList()
-               .ForEach(form => form.Close());
+            clearGraph();
             firstPart("");
             zxc = new Form2(pa, pb, pc, list1, null, 0);
             zxc.Show();
@@ -46,11 +42,7 @@ namespace medGraph
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-                .OfType<Form>()
-                .Where(form => String.Equals(form.Name, "Form2"))
-                .ToList()
-                .ForEach(form => form.Close());
+            clearGraph();
             firstPart("");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {                
@@ -95,7 +87,6 @@ namespace medGraph
             pb = 0;
             pc = 0;
             epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -103,17 +94,14 @@ namespace medGraph
             try
             {
                 FormSerialisor.Serialise(this, Application.StartupPath + @"\serialise.xml");
+         
             }
-            catch (Exception ee) { }
+            catch (Exception ee) { MessageBox.Show("Ошибка сериализации"); }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-             .OfType<Form>()
-             .Where(form => String.Equals(form.Name, "Form2"))
-             .ToList()
-             .ForEach(form => form.Close());
+            clearGraph();
             firstPart("a_");
             zxc = new Form2(pa, pb, pc, list1, null, 0);
             zxc.Show();
@@ -121,11 +109,7 @@ namespace medGraph
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-               .OfType<Form>()
-               .Where(form => String.Equals(form.Name, "Form2"))
-               .ToList()
-               .ForEach(form => form.Close());
+            clearGraph();
             firstPart("a_");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {
@@ -136,11 +120,7 @@ namespace medGraph
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-             .OfType<Form>()
-             .Where(form => String.Equals(form.Name, "Form2"))
-             .ToList()
-             .ForEach(form => form.Close());
+            clearGraph();
             firstPart("m_");
             zxc = new Form2(pa, pb, pc, list1, null, 0);
             zxc.Show();
@@ -149,11 +129,7 @@ namespace medGraph
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.OpenForms
-             .OfType<Form>()
-             .Where(form => String.Equals(form.Name, "Form2"))
-             .ToList()
-             .ForEach(form => form.Close());
+            clearGraph();
             firstPart("m_");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {
@@ -190,6 +166,30 @@ namespace medGraph
             res.Add(c, dd);
             res.Add(c, 0);
             return res;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            clearGraph();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            clearGraph();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            clearGraph();
+        }
+
+        public void clearGraph()
+        {
+            Application.OpenForms
+             .OfType<Form>()
+             .Where(form => String.Equals(form.Name, "Form2"))
+             .ToList()
+             .ForEach(form => form.Close());
         }
 
         public static double SolveQuadratic(double a, double b, double c, double y)
