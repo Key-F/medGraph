@@ -39,7 +39,7 @@ namespace medGraph
                .Where(form => String.Equals(form.Name, "Form2"))
                .ToList()
                .ForEach(form => form.Close());
-            firstPart();
+            firstPart("");
             zxc = new Form2(pa, pb, pc, list1, null, 0);
             zxc.Show();
         }
@@ -51,25 +51,25 @@ namespace medGraph
                 .Where(form => String.Equals(form.Name, "Form2"))
                 .ToList()
                 .ForEach(form => form.Close());
-            firstPart();
+            firstPart("");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
             {                
-                zxc = new Form2(pa, pb, pc, list1, secondPart(i), i);
+                zxc = new Form2(pa, pb, pc, list1, secondPart(i, ""), i);
                 zxc.Show();
             }
         }
 
-        public void firstPart()
+        public void firstPart(string prefix)
         {
             list1.Clear();
             for (int i = 1; i <= Convert.ToInt32(textBox14.Text); i++)
             {
-                string controlNameC = "c" + i;
+                string controlNameC = prefix + "c" + i;
                 var controls = this.Controls.Find(controlNameC, true);
                 var control = controls.FirstOrDefault();
                 double.TryParse(control.Text.Replace('.', ','), out double c);
-                string controlNameD1 = "d" + i + "1";
-                string controlNameD2 = "d" + i + "2";
+                string controlNameD1 = prefix + "d" + i + "1";
+                string controlNameD2 = prefix + "d" + i + "2";
                 var controlsD1 = this.Controls.Find(controlNameD1, true);
                 var controlD1 = controlsD1.FirstOrDefault();
                 var controlsD2 = this.Controls.Find(controlNameD2, true);
@@ -107,10 +107,65 @@ namespace medGraph
             catch (Exception ee) { }
         }
 
-        public PointPairList secondPart(int i)
+        private void button2_Click(object sender, EventArgs e)
         {
-            string controlNameD1 = "ed" + i + "1";
-            string controlNameD2 = "ed" + i + "2";
+            Application.OpenForms
+             .OfType<Form>()
+             .Where(form => String.Equals(form.Name, "Form2"))
+             .ToList()
+             .ForEach(form => form.Close());
+            firstPart("a_");
+            zxc = new Form2(pa, pb, pc, list1, null, 0);
+            zxc.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms
+               .OfType<Form>()
+               .Where(form => String.Equals(form.Name, "Form2"))
+               .ToList()
+               .ForEach(form => form.Close());
+            firstPart("a_");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
+            {
+                zxc = new Form2(pa, pb, pc, list1, secondPart(i, "a_"), i);
+                zxc.Show();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms
+             .OfType<Form>()
+             .Where(form => String.Equals(form.Name, "Form2"))
+             .ToList()
+             .ForEach(form => form.Close());
+            firstPart("m_");
+            zxc = new Form2(pa, pb, pc, list1, null, 0);
+            zxc.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms
+             .OfType<Form>()
+             .Where(form => String.Equals(form.Name, "Form2"))
+             .ToList()
+             .ForEach(form => form.Close());
+            firstPart("m_");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
+            {
+                zxc = new Form2(pa, pb, pc, list1, secondPart(i, "m_"), i);
+                zxc.Show();
+            }
+        }
+
+        public PointPairList secondPart(int i, string prefix)
+        {
+            string controlNameD1 = prefix + "ed" + i + "1";
+            string controlNameD2 = prefix + "ed" + i + "2";
             var controlsD1 = this.Controls.Find(controlNameD1, true);
             var controlD1 = controlsD1.FirstOrDefault();
             var controlsD2 = this.Controls.Find(controlNameD2, true);
@@ -118,12 +173,12 @@ namespace medGraph
             double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
             double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
             double dd = (d1 - d2);          
-            string controlNameresultD = "resultD" + i;
+            string controlNameresultD = prefix + "resultD" + i;
             var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
             var controlresultD = controlsNameresultD.FirstOrDefault();
             controlresultD.Text = Convert.ToString(dd);
             double c = SolveQuadratic(pa, pb, pc, dd);
-            string contolNameConc = "conc" + i;
+            string contolNameConc = prefix + "conc" + i;
             var controlsConc = this.Controls.Find(contolNameConc, true);
             var controlConc = controlsConc.FirstOrDefault();
 
