@@ -266,7 +266,8 @@
             this.resultD2.Location = new System.Drawing.Point(212, 9);
             this.resultD2.Margin = new System.Windows.Forms.Padding(2);
             this.resultD2.Name = "resultD2";
-            this.resultD2.Size = new System.Drawing.Size(38, 32);
+            this.resultD2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD2.Size = new System.Drawing.Size(55, 32);
             this.resultD2.TabIndex = 20;
             this.resultD2.Text = "";
             // 
@@ -638,7 +639,8 @@
             this.resultD1.Location = new System.Drawing.Point(212, 9);
             this.resultD1.Margin = new System.Windows.Forms.Padding(2);
             this.resultD1.Name = "resultD1";
-            this.resultD1.Size = new System.Drawing.Size(38, 32);
+            this.resultD1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD1.Size = new System.Drawing.Size(55, 32);
             this.resultD1.TabIndex = 20;
             this.resultD1.Text = "";
             // 
@@ -826,7 +828,8 @@
             this.resultD3.Location = new System.Drawing.Point(212, 9);
             this.resultD3.Margin = new System.Windows.Forms.Padding(2);
             this.resultD3.Name = "resultD3";
-            this.resultD3.Size = new System.Drawing.Size(38, 32);
+            this.resultD3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD3.Size = new System.Drawing.Size(55, 32);
             this.resultD3.TabIndex = 20;
             this.resultD3.Text = "";
             // 
@@ -909,7 +912,8 @@
             this.resultD4.Location = new System.Drawing.Point(212, 9);
             this.resultD4.Margin = new System.Windows.Forms.Padding(2);
             this.resultD4.Name = "resultD4";
-            this.resultD4.Size = new System.Drawing.Size(38, 32);
+            this.resultD4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD4.Size = new System.Drawing.Size(55, 32);
             this.resultD4.TabIndex = 20;
             this.resultD4.Text = "";
             // 
@@ -992,7 +996,8 @@
             this.resultD5.Location = new System.Drawing.Point(212, 9);
             this.resultD5.Margin = new System.Windows.Forms.Padding(2);
             this.resultD5.Name = "resultD5";
-            this.resultD5.Size = new System.Drawing.Size(38, 32);
+            this.resultD5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD5.Size = new System.Drawing.Size(55, 32);
             this.resultD5.TabIndex = 20;
             this.resultD5.Text = "";
             // 
@@ -1075,7 +1080,8 @@
             this.resultD6.Location = new System.Drawing.Point(212, 9);
             this.resultD6.Margin = new System.Windows.Forms.Padding(2);
             this.resultD6.Name = "resultD6";
-            this.resultD6.Size = new System.Drawing.Size(38, 32);
+            this.resultD6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD6.Size = new System.Drawing.Size(55, 32);
             this.resultD6.TabIndex = 20;
             this.resultD6.Text = "";
             // 
@@ -1158,7 +1164,8 @@
             this.resultD7.Location = new System.Drawing.Point(212, 9);
             this.resultD7.Margin = new System.Windows.Forms.Padding(2);
             this.resultD7.Name = "resultD7";
-            this.resultD7.Size = new System.Drawing.Size(38, 32);
+            this.resultD7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD7.Size = new System.Drawing.Size(55, 32);
             this.resultD7.TabIndex = 20;
             this.resultD7.Text = "";
             // 
@@ -1241,7 +1248,8 @@
             this.resultD8.Location = new System.Drawing.Point(212, 9);
             this.resultD8.Margin = new System.Windows.Forms.Padding(2);
             this.resultD8.Name = "resultD8";
-            this.resultD8.Size = new System.Drawing.Size(38, 32);
+            this.resultD8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.resultD8.Size = new System.Drawing.Size(55, 32);
             this.resultD8.TabIndex = 20;
             this.resultD8.Text = "";
             // 
