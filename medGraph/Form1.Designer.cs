@@ -202,7 +202,7 @@
             this.tabIgG.Margin = new System.Windows.Forms.Padding(2);
             this.tabIgG.Name = "tabIgG";
             this.tabIgG.Padding = new System.Windows.Forms.Padding(2);
-            this.tabIgG.Size = new System.Drawing.Size(772, 759);
+            this.tabIgG.Size = new System.Drawing.Size(697, 759);
             this.tabIgG.TabIndex = 1;
             this.tabIgG.Text = "IgG";
             this.tabIgG.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             this.panel4.Location = new System.Drawing.Point(266, 148);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 76);
+            this.panel4.Size = new System.Drawing.Size(414, 76);
             this.panel4.TabIndex = 25;
             // 
             // conc2
@@ -227,7 +227,7 @@
             this.conc2.Location = new System.Drawing.Point(298, 8);
             this.conc2.Margin = new System.Windows.Forms.Padding(2);
             this.conc2.Name = "conc2";
-            this.conc2.Size = new System.Drawing.Size(190, 32);
+            this.conc2.Size = new System.Drawing.Size(110, 32);
             this.conc2.TabIndex = 24;
             this.conc2.Text = "";
             // 
@@ -523,7 +523,7 @@
             this.button8.Location = new System.Drawing.Point(266, 709);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(492, 27);
+            this.button8.Size = new System.Drawing.Size(414, 27);
             this.button8.TabIndex = 21;
             this.button8.Text = "Результат";
             this.button8.UseVisualStyleBackColor = true;
@@ -591,7 +591,7 @@
             this.panel11.Location = new System.Drawing.Point(266, 68);
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(492, 76);
+            this.panel11.Size = new System.Drawing.Size(414, 76);
             this.panel11.TabIndex = 16;
             // 
             // conc1
@@ -599,7 +599,7 @@
             this.conc1.Location = new System.Drawing.Point(298, 8);
             this.conc1.Margin = new System.Windows.Forms.Padding(2);
             this.conc1.Name = "conc1";
-            this.conc1.Size = new System.Drawing.Size(190, 32);
+            this.conc1.Size = new System.Drawing.Size(110, 32);
             this.conc1.TabIndex = 24;
             this.conc1.Text = "";
             // 
@@ -723,7 +723,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(780, 789);
+            this.tabControl1.Size = new System.Drawing.Size(705, 789);
             this.tabControl1.TabIndex = 12;
             // 
             // panel6
@@ -746,7 +746,7 @@
             this.d62.Name = "d62";
             this.d62.Size = new System.Drawing.Size(70, 23);
             this.d62.TabIndex = 114;
-            this.d62.Text = "56,25";
+            this.d62.Text = "0";
             // 
             // d61
             // 
@@ -756,7 +756,7 @@
             this.d61.Name = "d61";
             this.d61.Size = new System.Drawing.Size(70, 23);
             this.d61.TabIndex = 113;
-            this.d61.Text = "56,25";
+            this.d61.Text = "0";
             // 
             // c6
             // 
@@ -765,7 +765,7 @@
             this.c6.Name = "c6";
             this.c6.Size = new System.Drawing.Size(61, 23);
             this.c6.TabIndex = 112;
-            this.c6.Text = "7,5";
+            this.c6.Text = "0";
             // 
             // panel8
             // 
@@ -779,7 +779,7 @@
             this.panel8.Location = new System.Drawing.Point(266, 228);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(492, 76);
+            this.panel8.Size = new System.Drawing.Size(414, 76);
             this.panel8.TabIndex = 26;
             // 
             // conc3
@@ -787,7 +787,7 @@
             this.conc3.Location = new System.Drawing.Point(298, 8);
             this.conc3.Margin = new System.Windows.Forms.Padding(2);
             this.conc3.Name = "conc3";
-            this.conc3.Size = new System.Drawing.Size(190, 32);
+            this.conc3.Size = new System.Drawing.Size(110, 32);
             this.conc3.TabIndex = 24;
             this.conc3.Text = "";
             // 
@@ -862,7 +862,7 @@
             this.panel10.Location = new System.Drawing.Point(266, 308);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(492, 76);
+            this.panel10.Size = new System.Drawing.Size(414, 76);
             this.panel10.TabIndex = 27;
             // 
             // conc4
@@ -870,7 +870,7 @@
             this.conc4.Location = new System.Drawing.Point(298, 8);
             this.conc4.Margin = new System.Windows.Forms.Padding(2);
             this.conc4.Name = "conc4";
-            this.conc4.Size = new System.Drawing.Size(190, 32);
+            this.conc4.Size = new System.Drawing.Size(110, 32);
             this.conc4.TabIndex = 24;
             this.conc4.Text = "";
             // 
@@ -892,7 +892,7 @@
             this.ed41.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.ed41.Size = new System.Drawing.Size(43, 32);
             this.ed41.TabIndex = 22;
-            this.ed41.Text = "30";
+            this.ed41.Text = "0";
             // 
             // ed42
             // 
@@ -902,7 +902,7 @@
             this.ed42.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.ed42.Size = new System.Drawing.Size(43, 27);
             this.ed42.TabIndex = 21;
-            this.ed42.Text = "4,5";
+            this.ed42.Text = "";
             // 
             // resultD4
             // 
@@ -945,7 +945,7 @@
             this.panel12.Location = new System.Drawing.Point(266, 388);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(492, 76);
+            this.panel12.Size = new System.Drawing.Size(414, 76);
             this.panel12.TabIndex = 28;
             // 
             // conc5
@@ -953,7 +953,7 @@
             this.conc5.Location = new System.Drawing.Point(298, 8);
             this.conc5.Margin = new System.Windows.Forms.Padding(2);
             this.conc5.Name = "conc5";
-            this.conc5.Size = new System.Drawing.Size(190, 32);
+            this.conc5.Size = new System.Drawing.Size(110, 32);
             this.conc5.TabIndex = 24;
             this.conc5.Text = "";
             // 
@@ -1028,7 +1028,7 @@
             this.panel13.Location = new System.Drawing.Point(266, 468);
             this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(492, 76);
+            this.panel13.Size = new System.Drawing.Size(414, 76);
             this.panel13.TabIndex = 29;
             // 
             // conc6
@@ -1036,7 +1036,7 @@
             this.conc6.Location = new System.Drawing.Point(298, 8);
             this.conc6.Margin = new System.Windows.Forms.Padding(2);
             this.conc6.Name = "conc6";
-            this.conc6.Size = new System.Drawing.Size(190, 32);
+            this.conc6.Size = new System.Drawing.Size(110, 32);
             this.conc6.TabIndex = 24;
             this.conc6.Text = "";
             // 
@@ -1111,7 +1111,7 @@
             this.panel14.Location = new System.Drawing.Point(266, 548);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(492, 76);
+            this.panel14.Size = new System.Drawing.Size(414, 76);
             this.panel14.TabIndex = 30;
             // 
             // conc7
@@ -1119,7 +1119,7 @@
             this.conc7.Location = new System.Drawing.Point(298, 8);
             this.conc7.Margin = new System.Windows.Forms.Padding(2);
             this.conc7.Name = "conc7";
-            this.conc7.Size = new System.Drawing.Size(190, 32);
+            this.conc7.Size = new System.Drawing.Size(110, 32);
             this.conc7.TabIndex = 24;
             this.conc7.Text = "";
             // 
@@ -1194,7 +1194,7 @@
             this.panel15.Location = new System.Drawing.Point(266, 628);
             this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(492, 76);
+            this.panel15.Size = new System.Drawing.Size(414, 76);
             this.panel15.TabIndex = 31;
             // 
             // conc8
@@ -1202,7 +1202,7 @@
             this.conc8.Location = new System.Drawing.Point(298, 8);
             this.conc8.Margin = new System.Windows.Forms.Padding(2);
             this.conc8.Name = "conc8";
-            this.conc8.Size = new System.Drawing.Size(190, 32);
+            this.conc8.Size = new System.Drawing.Size(110, 32);
             this.conc8.TabIndex = 24;
             this.conc8.Text = "";
             // 
@@ -1269,7 +1269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 789);
+            this.ClientSize = new System.Drawing.Size(705, 789);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

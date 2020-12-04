@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using ZedGraph;
+using FormSerialisation;
 
 
 namespace medGraph
@@ -22,8 +23,13 @@ namespace medGraph
 
 
         public Form1()
-        {
+        {           
             InitializeComponent();
+            try
+            {
+                FormSerialisor.Deserialise(this, Application.StartupPath + @"\serialise.xml");
+            }
+            catch (Exception e) { }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -71,6 +77,7 @@ namespace medGraph
                 double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
                 double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
                 double dd = (d1 + d2) / 2;
+                if (dd != 0 || c !=0 )
                 list1.Add(c, dd);
             }
             IList<double> XandY = PP.PPToAxe(list1);
@@ -93,11 +100,11 @@ namespace medGraph
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-          //  Properties.Settings.Default.
-           // Properties.Settings.Default.pictues = checkBox7.Checked;
-            //Properties.Settings.Default.ontop = checkBox6.Checked;
-            //Properties.Settings.Default.Save();
+            try
+            {
+                FormSerialisor.Serialise(this, Application.StartupPath + @"\serialise.xml");
+            }
+            catch (Exception ee) { }
         }
 
         public PointPairList secondPart(int i)
@@ -110,7 +117,7 @@ namespace medGraph
             var controlD2 = controlsD2.FirstOrDefault();
             double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
             double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
-            double dd = (d1 - d2);
+            double dd = (d1 - d2);          
             string controlNameresultD = "resultD" + i;
             var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
             var controlresultD = controlsNameresultD.FirstOrDefault();

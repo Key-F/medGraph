@@ -65,6 +65,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSerialisor.cs" />
     <Compile Include="part1.cs" />
     <Compile Include="part2.cs" />
     <Compile Include="PP.cs" />
