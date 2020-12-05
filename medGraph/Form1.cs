@@ -148,7 +148,7 @@ namespace medGraph
             var controlD2 = controlsD2.FirstOrDefault();
             double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
             double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
-            double dd = (d1 - d2);          
+            double dd = Math.Abs(d1 - d2);          
             string controlNameresultD = prefix + "resultD" + i;
             var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
             var controlresultD = controlsNameresultD.FirstOrDefault();
@@ -181,6 +181,27 @@ namespace medGraph
         private void button6_Click(object sender, EventArgs e)
         {
             clearGraph();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            firstPart("a_");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)            
+                secondPart(i, "a_");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            firstPart("");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
+                secondPart(i, "");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            firstPart("m_");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
+                secondPart(i, "m_");
         }
 
         public void clearGraph()
