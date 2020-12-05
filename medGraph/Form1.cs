@@ -19,7 +19,7 @@ namespace medGraph
         
         PointPairList list1 = new PointPairList();
         double pa, pb, pc;
-        Form2 zxc;
+        
 
 
         public Form1()
@@ -29,26 +29,14 @@ namespace medGraph
             {
                 FormSerialisor.Deserialise(this, Application.StartupPath + @"\serialise.xml");
             }
-            catch (Exception e) { MessageBox.Show("Ошибка десериализации"); }
+            catch (Exception) { MessageBox.Show("Ошибка десериализации"); }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("");
-            zxc = new Form2(pa, pb, pc, list1, null, 0);
-            zxc.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            clearGraph();
-            firstPart("");
-            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
-            {                
-                zxc = new Form2(pa, pb, pc, list1, secondPart(i, ""), i);
-                zxc.Show();
-            }
+            new Form2(pa, pb, pc, list1, null, 0);            
         }
 
         public void firstPart(string prefix)
@@ -69,7 +57,7 @@ namespace medGraph
                 double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
                 double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
                 double dd = (d1 + d2) / 2;
-                if (dd != 0 || c !=0 )
+                if (dd != 0 && c !=0 )
                 list1.Add(c, dd);
             }
             IList<double> XandY = PP.PPToAxe(list1);
@@ -96,46 +84,37 @@ namespace medGraph
                 FormSerialisor.Serialise(this, Application.StartupPath + @"\serialise.xml");
          
             }
-            catch (Exception ee) { MessageBox.Show("Ошибка сериализации"); }
+            catch (Exception) { MessageBox.Show("Ошибка сериализации"); }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("a_");
-            zxc = new Form2(pa, pb, pc, list1, null, 0);
-            zxc.Show();
+            new Form2(pa, pb, pc, list1, null, 0);           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("a_");
-            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
-            {
-                zxc = new Form2(pa, pb, pc, list1, secondPart(i, "a_"), i);
-                zxc.Show();
-            }
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)            
+                new Form2(pa, pb, pc, list1, secondPart(i, "a_"), i);                            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("m_");
-            zxc = new Form2(pa, pb, pc, list1, null, 0);
-            zxc.Show();
-
+            new Form2(pa, pb, pc, list1, null, 0);            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("m_");
-            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)
-            {
-                zxc = new Form2(pa, pb, pc, list1, secondPart(i, "m_"), i);
-                zxc.Show();
-            }
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)           
+                new Form2(pa, pb, pc, list1, secondPart(i, "m_"), i);            
         }
 
         public PointPairList secondPart(int i, string prefix)
@@ -148,7 +127,8 @@ namespace medGraph
             var controlD2 = controlsD2.FirstOrDefault();
             double.TryParse(controlD1.Text.Replace('.', ','), out double d1);
             double.TryParse(controlD2.Text.Replace('.', ','), out double d2);
-            double dd = Math.Abs(d1 - d2);          
+            double dd = Math.Abs(d1 - d2);
+            if (dd == 0) return null;
             string controlNameresultD = prefix + "resultD" + i;
             var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
             var controlresultD = controlsNameresultD.FirstOrDefault();
@@ -191,6 +171,14 @@ namespace medGraph
         }
 
         private void button11_Click(object sender, EventArgs e)
+        {       
+            clearGraph();
+            firstPart("");
+            for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)            
+            new Form2(pa, pb, pc, list1, secondPart(i, ""), i);                           
+        }
+
+        private void button8_Click(object sender, EventArgs e)
         {
             firstPart("");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)

@@ -12,25 +12,29 @@ using ZedGraph;
 namespace medGraph
 {
     public partial class Form2 : Form
-    {
-        PointPairList list1 = new PointPairList();
+    {      
         public Form2()
         {
             InitializeComponent();
         }
 
         
-        public Form2(double pa, double pb, double pc, PointPairList list1, PointPairList res, int num)
+        public Form2(double pa, double pb, double pc, PointPairList testData, PointPairList res, int num)
         {
-           
-            list1.Sort();
+            if (res == null && num != 0)
+            {
+                this.Close();
+                return;
+            }
+
+            testData.Sort();
             InitializeComponent();
             GraphPane pane = zedGraphControl1.GraphPane;
 
             PointPairList p = new PointPairList();
 
             
-            for (double i = 0; i < list1[list1.Count - 1].X; i += 0.5)
+            for (double i = 0; i <= testData[testData.Count - 1].X; i += 0.5)
             {
                 p.Add(i, pa*i*i + pb*i +pc);
                 // p[i].X = i;
@@ -54,7 +58,7 @@ namespace medGraph
             // Обводка ромбиков будут рисоваться голубым цветом (Color.Blue),
             // Опорные точки - ромбики (SymbolType.Diamond)
             LineItem myCurve = pane.AddCurve("Аппроксимация", p, Color.Black, SymbolType.None);
-            LineItem myCurve1 = pane.AddCurve("Эксперементальные данные", list1, Color.BlueViolet, SymbolType.Circle);
+            LineItem myCurve1 = pane.AddCurve("Эксперементальные данные", testData, Color.BlueViolet, SymbolType.Circle);
 
 
             LineItem myCurve2 = pane.AddCurve("Проекция", res, Color.DarkGray, SymbolType.None);
@@ -64,6 +68,8 @@ namespace medGraph
             zedGraphControl1.AxisChange();
 
             zedGraphControl1.Invalidate();
+
+            this.Show();
 
         }
 
