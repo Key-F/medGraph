@@ -19,7 +19,7 @@ namespace medGraph
         }
 
         
-        public Form2(double pa, double pb, double pc, PointPairList testData, PointPairList res, int num)
+        public Form2(double pa, double pb, double pc, double ea, double eb, double lk, double lb, PointPairList testData, PointPairList res, int num)
         {
             if (res == null && num != 0)
             {
@@ -31,15 +31,15 @@ namespace medGraph
             InitializeComponent();
             GraphPane pane = zedGraphControl1.GraphPane;
 
-            PointPairList p = new PointPairList();
+            PointPairList pl = new PointPairList();
+            PointPairList pp = new PointPairList();
+            PointPairList pe = new PointPairList();
 
-            
-            for (double i = 0; i <= testData[testData.Count - 1].X; i += 0.5)
-            {
-                p.Add(i, pa*i*i + pb*i +pc);
-                // p[i].X = i;
-                // p[i].Y = Math.Log(o + b * i);
-            }
+            int limitX = (int)testData[testData.Count - 1].X + 1;
+
+            pl = Eapp.addPointsL(limitX, lk, lb);
+            pp = Eapp.addPointsP(limitX, pa, pb, pc);
+            pe = Eapp.addPointsE(limitX, ea, eb);
 
             pane.XAxis.Title.Text = "C"; //подпись оси X
             pane.YAxis.Title.Text = "D"; //подпись оси Y
@@ -57,7 +57,13 @@ namespace medGraph
 
             // Обводка ромбиков будут рисоваться голубым цветом (Color.Blue),
             // Опорные точки - ромбики (SymbolType.Diamond)
-            LineItem myCurve = pane.AddCurve("Аппроксимация", p, Color.Black, SymbolType.None);
+            LineItem myCurve;
+            if (Form1.checkbox == 0)
+                myCurve = pane.AddCurve("Линейная аппроксимация", pl, Color.Black, SymbolType.None);
+            else if (Form1.checkbox == 1)
+                myCurve = pane.AddCurve("Квадратичная ппроксимация", pp, Color.Black, SymbolType.None);
+            else if (Form1.checkbox == 2)
+                pane.AddCurve("Экспоненциальная аппроксимация", pe, Color.Black, SymbolType.None);
             LineItem myCurve1 = pane.AddCurve("Эксперементальные данные", testData, Color.BlueViolet, SymbolType.Circle);
 
 
