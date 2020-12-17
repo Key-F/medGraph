@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZedGraph;
 
 namespace medGraph
 {
@@ -32,7 +33,30 @@ namespace medGraph
             a1 = (p[7] * p[10] - p[6] * p[11]) / (p[5] * p[10] - p[6] * p[9]);
             a2 = (p[3] - p[2] * a0 - p[1] * a1) / p[0];
         }
-        public void approx(int n, double[] xList, double[] yList, double[] func)
+        public void approxl(int n, double[] xList, double[] yList, ref double k, ref double b)
+        {
+            double[] x = new double[n];
+            double[] y = new double[n];
+            double[] x2 = new double[n];
+            double[] xy = new double[n];
+            x = xList;
+            y = yList;
+            for (int i = 0; i < n; i++)
+            {
+                x2[i] = x[i] * x[i];
+            }
+            for (int i = 0; i < n; i++)
+            {
+                xy[i] = x[i] * y[i];
+            }
+            double X = Sum(n, x);
+            double Y = Sum(n, y);
+            double X2 = Sum(n, x2);
+            double XY = Sum(n, xy);
+            k = (n * XY - (X * Y)) / (n * X2 - X * X);
+            b = (Y - k * X) / n;
+        }
+        public void approx(int n, double[] xList, double[] yList, ref double aa, ref double bb)
         {
             double[] x = new double[n];
             double[] y = new double[n];
@@ -68,11 +92,11 @@ namespace medGraph
             a1 = (c * e - b * f) / (a * e - b * d);
             // a0 = (Sum(n, X2) * Sum(n, Y) - Sum(n, XY) * Sum(n, X)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
             // a1 = (Sum(n, XY) * n - Sum(n, X) * Sum(n, Y)) / (Sum(n, X2) * n - Sum(n, X) * Sum(n, X));
-            func[0] = Math.Pow(Math.E, a0);
-            func[1] = a1;
+            aa = Math.Pow(Math.E, a0);
+            bb = a1;
             //F = func[0] * e^(func[1]*x)
         }
-        public  void approx2(int n, double[] xList, double[] yList, ref double a, ref double b, ref double c)
+        public void approx2(int n, double[] xList, double[] yList, ref double a, ref double b, ref double c)
         {
             double[] X4 = new double[n];
             double[] X3 = new double[n];
@@ -112,6 +136,33 @@ namespace medGraph
             a = a2;
             b = a1;
             c = a0;
+        }
+        public static PointPairList addPointsL(int limitX, double lk, double lb)
+        {
+            PointPairList p = new PointPairList();
+            for (double i = 0; i <= limitX; i += 0.1)
+            {
+                p.Add(i, lk * i + lb);
+            }
+            return p;
+        }
+        public static PointPairList addPointsP(int limitX, double pa, double pb, double pc)
+        {
+            PointPairList p = new PointPairList();
+            for (double i = 0; i <= limitX; i += 0.1)
+            {
+                p.Add(i, pa * i * i + pb * i + pc);
+            }
+            return p;
+        }
+        public static PointPairList addPointsE(int limitX, double ea, double eb)
+        {
+            PointPairList p = new PointPairList();
+            for (double i = 0; i <= limitX; i += 0.1)
+            {
+                p.Add(i, ea * Math.Pow(Math.E, eb * i));
+            }
+            return p;
         }
     }
 }

@@ -16,12 +16,9 @@ namespace medGraph
 {
     public partial class Form1 : Form
     {
-        
         PointPairList list1 = new PointPairList();
-        double pa, pb, pc;
-        
-
-
+        double pa, pb, pc, ea, eb, lk, lb;
+        public static int checkbox = 0;
         public Form1()
         {           
             InitializeComponent();
@@ -36,7 +33,7 @@ namespace medGraph
         {
             clearGraph();
             firstPart("");
-            new Form2(pa, pb, pc, list1, null, 0);            
+            new Form2(pa, pb, pc, ea, eb, lk, lb, list1, null, 0);            
         }
 
         public void firstPart(string prefix)
@@ -74,7 +71,25 @@ namespace medGraph
             pa = 0;
             pb = 0;
             pc = 0;
-            epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
+            ea = 0;
+            eb = 0;
+            lk = 0;
+            lb = 0;
+            if (radioButton1.Checked == true)
+            {
+                epp.approxl(XandY.Count / 2, X, Y, ref lk, ref lb);
+                checkbox = 0;
+            }
+            else if (radioButton2.Checked == true)
+            {                 
+                epp.approx2(XandY.Count / 2, X, Y, ref pa, ref pb, ref pc);
+                checkbox = 1;
+            }
+            else if (radioButton3.Checked == true)
+            {
+                epp.approx(XandY.Count / 2, X, Y, ref ea, ref eb);
+                checkbox = 2;
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -91,7 +106,7 @@ namespace medGraph
         {
             clearGraph();
             firstPart("a_");
-            new Form2(pa, pb, pc, list1, null, 0);           
+            new Form2(pa, pb, pc, ea, eb, lk, lb, list1, null, 0);           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,14 +114,14 @@ namespace medGraph
             clearGraph();
             firstPart("a_");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)            
-                new Form2(pa, pb, pc, list1, secondPart(i, "a_"), i);                            
+                new Form2(pa, pb, pc, ea, eb, lk, lb, list1, secondPart(i, "a_"), i);                            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             clearGraph();
             firstPart("m_");
-            new Form2(pa, pb, pc, list1, null, 0);            
+            new Form2(pa, pb, pc, ea, eb, lk, lb, list1, null, 0);            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -114,7 +129,7 @@ namespace medGraph
             clearGraph();
             firstPart("m_");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)           
-                new Form2(pa, pb, pc, list1, secondPart(i, "m_"), i);            
+                new Form2(pa, pb, pc, ea, eb, lk, lb, list1, secondPart(i, "m_"), i);            
         }
 
         public PointPairList secondPart(int i, string prefix)
@@ -133,7 +148,13 @@ namespace medGraph
             var controlsNameresultD = this.Controls.Find(controlNameresultD, true);
             var controlresultD = controlsNameresultD.FirstOrDefault();
             controlresultD.Text = Convert.ToString(dd);
-            double c = SolveQuadratic(pa, pb, pc, dd);
+            double c = 0;
+            if (radioButton1.Checked == true)
+                c = SolveLinear(lk, lb, dd);
+            else if (radioButton2.Checked == true)
+                c = SolveQuadratic(pa, pb, pc, dd);
+            else if (radioButton3.Checked == true)
+                c = SolveExp(ea, eb, dd);
             string contolNameConc = prefix + "conc" + i;
             var controlsConc = this.Controls.Find(contolNameConc, true);
             var controlConc = controlsConc.FirstOrDefault();
@@ -163,6 +184,16 @@ namespace medGraph
             clearGraph();
         }
 
+        private void label97_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button10_Click(object sender, EventArgs e)
         {
             firstPart("a_");
@@ -175,7 +206,7 @@ namespace medGraph
             clearGraph();
             firstPart("");
             for (int i = 1; i <= Convert.ToInt32(textBox48.Text); i++)            
-            new Form2(pa, pb, pc, list1, secondPart(i, ""), i);                           
+            new Form2(pa, pb, pc, ea, eb, lk, lb, list1, secondPart(i, ""), i);                           
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -218,6 +249,14 @@ namespace medGraph
                 x = (-b + System.Math.Sqrt(sqrtpart)) / (2 * a);
                 return x;
             }
+        }
+        public static double SolveLinear(double k, double b, double y)
+        {
+            return (y - b) / k;
+        }
+        public static double SolveExp(double a, double b, double y)
+        {
+            return Math.Log(y / a) / b;
         }
     }
 
